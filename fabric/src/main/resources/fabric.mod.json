@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mooojaaang",
+  "version": "${version}",
+
+  "name": "Mooojaaang...",
+  "description": "Mooojaaang... STUDIO !!!",
+  "authors": [],
+  "contact": {},
+
+  "license": "GNU GPL 3.0",
+  "icon": "assets/mooojaaang/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.theplaceholder.mooojaaang.MooojaaangFabric"
+    ]
+  },
+  "mixins": [
+    "mooojaaang.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "fabricloader": ">=0.14.23",
+    "minecraft": ">=1.20.2"
+  }
+}
