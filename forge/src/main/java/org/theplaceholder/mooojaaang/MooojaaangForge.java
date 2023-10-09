@@ -13,5 +13,6 @@ public class MooojaaangForge {
     private static final RegistryObject<SoundEvent> SOUND_EVENT = SOUND_EVENTS.register("mooojaaang", () -> SoundEvent.of(Mooojaaang.soundEventLocation));
     public MooojaaangForge() {
         SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        Mooojaaang.soundEvent = SOUND_EVENT.get();
     }
 }
