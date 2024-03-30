@@ -13,6 +13,6 @@ public class SplashOverlayMixin {
 
     @Inject(method = "render", at = @At("TAIL"))
     private void render(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        Mooojaaang.play();
+        Mooojaaang.tryToPlay();
     }
 }

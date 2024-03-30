@@ -19,6 +19,6 @@ public class ForgeLoadingOverlayMixin {
     @Inject(method = "render", at = @At("TAIL"))
     private void render(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         if(progress.progress() >= 0.99f)
-            Mooojaaang.play();
+            Mooojaaang.tryToPlay();
     }
 }
