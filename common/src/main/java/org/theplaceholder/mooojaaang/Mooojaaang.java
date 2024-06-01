@@ -1,9 +1,11 @@
 package org.theplaceholder.mooojaaang;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.sound.PositionedSoundInstance;
-import net.minecraft.client.sound.SoundManager;
-import net.minecraft.sound.SoundEvent;
+import com.google.common.base.Suppliers;
+import dev.architectury.registry.registries.Registrar;
+import dev.architectury.registry.registries.RegistrarManager;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 
 import java.util.function.Supplier;
 
@@ -11,12 +13,9 @@ public class Mooojaaang {
     public static Supplier<SoundEvent> SOUND_EVENT;
     public static final String MODID = "mooojaaang";
 
-    private static boolean isLaunching = true;
-    public static void tryToPlay() {
-        SoundManager soundManager = MinecraftClient.getInstance().getSoundManager();
-        if (isLaunching && soundManager.soundSystem.started) {
-            soundManager.play(PositionedSoundInstance.master(SOUND_EVENT.get(), 1.0F));
-            isLaunching = false;
-        }
+    public static void init() {
+        Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MODID));
+        Registrar<SoundEvent> SOUNDS = MANAGER.get().get(Registries.SOUND_EVENT);
+        SOUND_EVENT = SOUNDS.register(new ResourceLocation(MODID, MODID), () -> SoundEvent.createFixedRangeEvent(new ResourceLocation(MODID, MODID), 1.0f));
     }
 }
