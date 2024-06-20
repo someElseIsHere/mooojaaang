@@ -16,6 +16,6 @@ public class Mooojaaang {
     public static void init() {
         Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MODID));
         Registrar<SoundEvent> SOUNDS = MANAGER.get().get(Registries.SOUND_EVENT);
-        SOUND_EVENT = SOUNDS.register(new ResourceLocation(MODID, MODID), () -> SoundEvent.createFixedRangeEvent(new ResourceLocation(MODID, MODID), 1.0f));
+        SOUND_EVENT = SOUNDS.register(ResourceLocation.fromNamespaceAndPath(MODID, MODID), () -> SoundEvent.createFixedRangeEvent(ResourceLocation.fromNamespaceAndPath(MODID, MODID), 1.0f));
     }
 }
