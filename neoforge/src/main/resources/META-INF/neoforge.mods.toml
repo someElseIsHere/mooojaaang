@@ -16,21 +16,21 @@ Mooojaaang... STUDIO !!!
 
 [[dependencies.mooojaaang]]
 modId="neoforge"
-mandatory=true
+type="required"
 versionRange="[21,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.mooojaaang]]
 modId="minecraft"
-mandatory=true
+type="required"
 versionRange="[1.21,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.mooojaaang]]
 modId="architectury"
-mandatory=true
+type="required"
 versionRange="[13.0.1,)"
 ordering="NONE"
 side="BOTH"
