@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[4,)"
 license="GNU GPL 3.0"
-issueTrackerURL="https://github.com/someElseIsHere/mooojaaang/issues"
+issueTrackerURL="https://github.com/onePlaceholder/mooojaaang/issues"
 
 [[mods]]
 modId="mooojaaang"
@@ -24,14 +24,14 @@ side="BOTH"
 [[dependencies.mooojaaang]]
 modId="minecraft"
 type="required"
-versionRange="[1.21,)"
+versionRange="[1.21.8,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.mooojaaang]]
 modId="architectury"
 type="required"
-versionRange="[13.0.1,)"
+versionRange="[17.0.8,)"
 ordering="NONE"
 side="BOTH"
 

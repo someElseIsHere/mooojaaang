@@ -1,10 +1,10 @@
 package org.theplaceholder.mooojaaang;
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 
-public class MooojaaangFabric implements ModInitializer {
+public class MooojaaangFabric implements ClientModInitializer {
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
         Mooojaaang.init();
     }
 }
